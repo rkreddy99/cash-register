@@ -31,11 +31,10 @@ body {
 }
 
 .register {
-  width: 50vw;
-  min-width: 30rem;
+  min-width: 50vw;
+  max-width: 90vw;
   border: 2px double var(--primary-color);
   border-radius: 8px;
-  /* height: 20vh; */
   min-height: 28rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
