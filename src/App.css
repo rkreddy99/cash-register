@@ -1,38 +1,114 @@
+:root {
+  --primary-color: #001B3B;
+  --secondary-color: beige;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary-color);
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.header {
+  background-color: var(--primary-color);
+  width: 100vw;
+  height: 3.5rem;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: var(--secondary-color);
 }
 
-.App-link {
-  color: #61dafb;
+.register {
+  width: 50vw;
+  min-width: 30rem;
+  border: 2px double var(--primary-color);
+  border-radius: 8px;
+  /* height: 20vh; */
+  min-height: 28rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.register h3 {
+  color: var(--primary-color);
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+input {
+  border: 2px double var(--primary-color);
+  border-radius: 25px;
+  background-color: lightgray;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+input:focus {
+  outline: none;
+}
+
+.output {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+form p {
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  /* width: 90%; */
+}
+
+td, th {
+  border: 1px solid var(--secondary-color);
+  text-align: center;
+  padding: 3px;
+}
+
+td {
+  background-color: tomato;
+  width: 3.2rem;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+button {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 25px;
+  padding: 0.5rem;
+  width: 5rem;
+}
+
+h4 {
+  color: var(--primary-color);
+}
+
+hr {
+  color: var(--primary-color);
 }
