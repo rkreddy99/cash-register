@@ -62,7 +62,7 @@ function App() {
 			<div className="register">
 				<h3>Enter the bill amount and cash given by the customer and know minimum number of notes to return.</h3>
 				<hr/>
-				<form>
+				<form onSubmit={getDenomination}>
 					<p>Bill Amount</p>
 					<input
 						className="bill"
@@ -83,7 +83,7 @@ function App() {
 						required
 					/> }
 					<br/>
-					{showCash && <button onClick={getDenomination} type='submit'>Check</button>}
+					{showCash && <button type='submit'>Check</button>}
 				</form>
 				{showCash && <hr/>}
 				<div className="output">
