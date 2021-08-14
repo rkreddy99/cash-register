@@ -23,8 +23,8 @@ function App() {
 		event.preventDefault();
 		const inputBill = event.target.value;
 		setBill(inputBill);
-		if (inputBill !== "") setShowCash(true);
-		else if (inputBill === "") setShowCash(false);
+		if (Number(inputBill) > 0) setShowCash(true);
+		else setShowCash(false);
 	}
 
 	function changeHandlerCash(event) {
@@ -71,6 +71,7 @@ function App() {
 						onChange={changeHandlerBill}
 						value={bill}
 						required
+						min="1"
 					/>
 					<br/>
 					{ showCash && <p>Cash Given</p> }
@@ -81,6 +82,7 @@ function App() {
 						onChange={changeHandlerCash}
 						value={cashGiven}
 						required
+						min="1"
 					/> }
 					<br/>
 					{showCash && <button type='submit'>Check</button>}
